@@ -29,6 +29,13 @@ class ScheduleController {
           ],
         },
       },
+      include: [
+        {
+          moder: User,
+          as: 'user',
+          attributes: ['name'],
+        },
+      ],
       order: [
         'date'
       ],
